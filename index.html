@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Ankit Gupta
+        </title>
+        <link rel="icon" type="image/png" href="./public/title-icon.png">
+    </head>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+
+    
+    
+    
+    <script src="./pdf.js/build/pdf.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent default margin and padding and ensure no scrollbars */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh; /* 100% of the viewport height */
+        }
+
+        .white-div {
+            flex: 1; /* Take up 25% of the container */
+            background-color: white;
+            padding: 20px; /* Add padding for better spacing */
+            box-sizing: border-box; /* Include padding and border in the total width and height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-container {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 200px; /* Adjust the size of the profile photo */
+            border-radius: 0%; /* Make it a circle */
+        }
+
+        .profile-name {
+            margin-top: 20px;
+        
+        font-size: 22px; /* Adjust the font size */
+        font-family: 'Roboto', sans-serif;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 30px; /* Adjust the size of the social icons */
+            margin: 0 5px; /* Add margin between icons */
+        }
+
+        .yellow-div {
+            flex: 3;
+            background-color: #ffffcc;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #pdf-container {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 800px; /* Set a maximum width for better readability */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="white-div">
+            <div class="profile-container">
+                <img class="profile-photo" src="./public/DP.jpeg" alt="Profile Photo">
+                <br><br>
+                <div class="profile-name">Ankit Gupta</div>
+                <br><br>
+                <div class="social-icons">
+                    <!-- Add your social media icons here -->
+                    <a href="https://www.linkedin.com/in/ankitgupta78/" target="_blank">
+                        <img src="./public/icons8-linkedin-48.png" alt="Icon 4">
+                    </a>
+                    <a href="https://codeforces.com/profile/ankitcodes7" >
+                        <img src="./public/favicon-32x32.png" alt="">
+                    </a>
+                    <!-- <a href="https://leetcode.com/u/sh3ro/" target="_blank">
+                        <img src="./public/favicon-32x32 2.png" alt="Icon 2">
+                    </a>
+                    <a href="https://atcoder.jp/users/sh3ro" target="_blank">
+                        <img src="./public/favicon.png" alt="Icon 3">
+                    </a> -->
+                    <a href="https://github.com/ankitgupta1111" target="_blank">
+                        <img src="https://github.githubassets.com/favicons/favicon.svg" alt="Icon 4">
+                    </a>
+                    <a href="https://www.codechef.com/users/lively_bats_63" target="_blank">
+                        <img src="./public/cc-favicon.ico" alt="Icon 4">
+                    </a>
+                    <!-- Add more icons as needed -->
+                </div>
+            </div>
+        </div>
+        <div class="yellow-div">
+            <div class="pdf-container">
+                
+            </div>
+            <!-- <script>
+                // Replace this with the actual path to your PDF file
+                const pdfPath = './public/Aakash_Sirohi-3.pdf';
+        
+                // Initialize the PDF viewer
+                const container = document.getElementById('pdf-container');
+        
+                // Load the PDF file
+                pdfjsLib.getDocument(pdfPath).then(pdf => {
+                    // Get the first page
+                    pdf.getPage(1).then(page => {
+                        // Set the scale (adjust as needed)
+                        const scale = 1.5;
+                        const viewport = page.getViewport({ scale });
+        
+                        // Create a canvas element to render the page
+                        const canvas = document.createElement('canvas');
+                        canvas.width = viewport.width;
+                        canvas.height = viewport.height;
+        
+                        // Append the canvas to the container
+                        container.appendChild(canvas);
+        
+                        // Render the page content on the canvas
+                        const renderContext = {
+                            canvasContext: canvas.getContext('2d'),
+                            viewport: viewport,
+                        };
+                        page.render(renderContext);
+                    });
+                }).catch(error => {
+                    console.error('Error loading PDF:', error);
+                });
+            </script> -->
+        </div>
+    </div>
+    
+    
+</body>
+</html>
